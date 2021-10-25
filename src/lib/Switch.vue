@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style lang="scss">
-@use "sass:math";
 $h: 22px;
 $h2: $h - 4px;
 .gulu-switch {
@@ -31,7 +30,7 @@ $h2: $h - 4px;
   width: $h * 2;
   border: none;
   background: gray;
-  border-radius: math.div($h, 2);
+  border-radius: 11px;
   position: relative;
   > span {
     position: absolute;
@@ -40,7 +39,7 @@ $h2: $h - 4px;
     height: $h2;
     width: $h2;
     background: white;
-    border-radius: math.div($h, 2);
+    border-radius: 11px;
     transition: left 250ms;
   }
   &.gulu-checked {
