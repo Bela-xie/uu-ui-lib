@@ -2,8 +2,8 @@
   <div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
-      <h1>咕噜ui</h1>
-      <h2>这是一个很厉害的 UI 框架</h2>
+      <h1>UU 框架</h1>
+      <h2>一个基于 Vue 3 的 UI 框架</h2>
       <p class="actions">
         <a href="https://github.com/">Github</a>
         <router-link to="/doc">开始</router-link>
@@ -17,18 +17,18 @@
           <use xlink:href="#icon-vue"></use>
         </svg>
         <h3>基于 Vue 3</h3>
-        <p>骄傲地使用了 Vue 3 Composition API</p>
+        <p>使用了 Vue 3 Composition API</p>
       </li>
       <li>
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-light"></use>
+          <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript</h3>
         <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-ts"></use>
+          <use xlink:href="#icon-light"></use>
         </svg>
         <h3>代码易读</h3>
         <p>每个组件的源代码都极其简洁</p>

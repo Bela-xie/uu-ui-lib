@@ -94,14 +94,15 @@ aside {
   }
   > ol {
     > li {
-      padding: 4px 0;
+      // padding: 4px 0;
       > a {
         display: block;
-        padding: 0px 16px;
+        padding: 4px 16px;
         text-decoration: none;
       }
       > .router-link-active {
         background: white;
+        border-right: 3px solid #007974;
       }
     }
   }

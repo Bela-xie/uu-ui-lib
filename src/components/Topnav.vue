@@ -1,13 +1,21 @@
 <template>
   <div class="topnav">
     <div class="logo">
-      <svg class="icon">
-        <use xlink:href="#icon-logo"></use>
-      </svg>
+      <router-link to="/">
+        <img :src="logoImg" alt="" class="logoImg" />
+      </router-link>
     </div>
     <ul class="menu">
       <li>
+        <router-link to="/">主页</router-link>
+      </li>
+      <li>
         <router-link to="/doc">文档</router-link>
+      </li>
+      <li>
+        <a href="https://github.com/BelaXie/uu-ui-lib" target="__blank"
+          >Github</a
+        >
       </li>
     </ul>
     <svg v-if="toggleMenuVisible" class="icon toggleAside" @click="toggleAside">
@@ -18,6 +26,8 @@
 
 <script lang='ts'>
 import { inject, Ref } from "vue";
+import logoImg from "../assets/logo.png";
+
 export default {
   props: {
     toggleMenuVisible: {
@@ -30,7 +40,7 @@ export default {
     const toggleAside = () => {
       asideVisible.value = !asideVisible.value;
     };
-    return { toggleAside };
+    return { toggleAside, logoImg };
   },
 };
 </script>
@@ -44,15 +54,19 @@ $color: #007974;
   justify-content: center;
   align-content: center;
   z-index: 20;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   > .logo {
     max-width: 6em;
     margin-right: auto;
-    > svg {
+    svg {
       width: 32px;
+      height: 32px;
+    }
+    .logoImg {
+      width: 34px;
       height: 32px;
     }
   }
@@ -62,6 +76,13 @@ $color: #007974;
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+      > a {
+        text-decoration: none;
+        padding-bottom: 2px;
+        &:hover {
+          border-bottom: 2px solid $color;
+        }
+      }
     }
   }
   > .toggleAside {

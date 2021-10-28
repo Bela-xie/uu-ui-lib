@@ -10,3 +10,7 @@ declare module '*.md' {
     const string: String
     export default string
 }
+
+declare module "*.png" {
+    export default String;
+}
