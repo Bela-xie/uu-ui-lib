@@ -51,7 +51,7 @@ $color: #007974;
   color: $color;
   display: flex;
   padding: 16px;
-  justify-content: center;
+  justify-content: flex-end;
   align-content: center;
   z-index: 20;
   position: absolute;
@@ -61,6 +61,8 @@ $color: #007974;
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    position: fixed;
+    left: 15px;
     svg {
       width: 32px;
       height: 32px;
@@ -102,6 +104,7 @@ $color: #007974;
       display: none;
     }
     > .logo {
+      position: static;
       margin: 0 auto;
     }
   }

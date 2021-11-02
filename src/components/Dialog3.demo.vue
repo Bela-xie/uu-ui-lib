@@ -1,20 +1,17 @@
 <demo>
-常规使用
+支持closeOnClickOverlay
 </demo>
 <template>
   <div>
-    <Button @click="toggle">打开对话框</Button>
+    <Button @click="toggle">点击蒙层不关闭对话框</Button>
     <Dialog
       v-model:visible="x"
+      :closeOnClickOverlay="false"
       :ok="f1"
       :cancel="f2"
     >
-      <template v-slot:content>
-        <strong>加粗的内容</strong>
-      </template>
-      <template v-slot:title>
-        <strong>加粗的标题</strong>
-      </template>
+      <template v-slot:content> 内容 </template>
+      <template v-slot:title> 标题 </template>
     </Dialog>
   </div>
 </template>

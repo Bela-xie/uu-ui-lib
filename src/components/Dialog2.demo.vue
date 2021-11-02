@@ -1,5 +1,5 @@
 <demo>
-一键打开 Dialog
+函数式调用
 </demo>
 <template>
   <div>
