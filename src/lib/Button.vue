@@ -1,6 +1,6 @@
 <template>
-  <button class="gulu-button" :class="classes" :disabled="disabled">
-    <span v-if="loading" class="gulu-loadingIndicator"></span>
+  <button class="uu-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="uu-loadingIndicator"></span>
     <slot></slot>
   </button>
 </template>
@@ -34,9 +34,9 @@ export default {
     const classes = computed(() => {
       const { theme, size, level } = props;
       return {
-        [`gulu-theme-${theme}`]: theme,
-        [`gulu-size-${size}`]: size,
-        [`gulu-level-${level}`]: level,
+        [`uu-theme-${theme}`]: theme,
+        [`uu-size-${size}`]: size,
+        [`uu-level-${level}`]: level,
       };
     });
     return { classes };
@@ -52,7 +52,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.gulu-button {
+.uu-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -67,7 +67,7 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
-  //   选中除了第一个的 .gulu-button
+  //   选中除了第一个的 .uu-button
   & + & {
     margin-left: 8px;
   }
@@ -83,7 +83,7 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.gulu-theme-link {
+  &.uu-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -92,7 +92,7 @@ $grey: grey;
       color: lighten($blue, 10%);
     }
   }
-  &.gulu-theme-text {
+  &.uu-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -101,19 +101,19 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.gulu-size-big {
+  &.uu-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.gulu-size-small {
+  &.uu-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
 
-  &.gulu-theme-button {
-    &.gulu-level-main {
+  &.uu-theme-button {
+    &.uu-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -123,7 +123,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.gulu-level-danger {
+    &.uu-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -134,8 +134,8 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-link {
-    &.gulu-level-danger {
+  &.uu-theme-link {
+    &.uu-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -143,15 +143,15 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-text {
-    &.gulu-level-main {
+  &.uu-theme-text {
+    &.uu-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.gulu-level-danger {
+    &.uu-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -159,7 +159,7 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-button {
+  &.uu-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -168,14 +168,14 @@ $grey: grey;
       }
     }
   }
-  &.gulu-theme-link,
-  &.gulu-theme-text {
+  &.uu-theme-link,
+  &.uu-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .gulu-loadingIndicator {
+  > .uu-loadingIndicator {
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -184,10 +184,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: gulu-spin 1s infinite linear;
+    animation: uu-spin 1s infinite linear;
   }
 }
-@keyframes gulu-spin {
+@keyframes uu-spin {
   0% {
     transform: rotate(0deg);
   }

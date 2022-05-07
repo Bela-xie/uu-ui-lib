@@ -910,6 +910,11 @@ url-join@^4.0.1:
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
   integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
 
+vite-plugin-css@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/vite-plugin-css/-/vite-plugin-css-1.0.4.tgz#11a9285c3748c45b37c017843f5754aaf7991c19"
+  integrity sha512-5Tj8Lc7uwlLVd3Ns8ixDH9CjjAPS12OuIiheY4IOZuiaOwH9sAEzgB/svNMmW28ePimaNTPfyTrRX8ZONjqFqA==
+
 vite@^2.6.4:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.7.tgz#e15c1d8327950720b5d7c4ec3fb36a5a58ccf7cb"

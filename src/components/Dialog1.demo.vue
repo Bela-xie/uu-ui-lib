@@ -4,16 +4,12 @@
 <template>
   <div>
     <Button @click="toggle">打开对话框</Button>
-    <Dialog
-      v-model:visible="x"
-      :ok="f1"
-      :cancel="f2"
-    >
+    <Dialog v-model:visible="x" :ok="f1" :cancel="f2">
       <template v-slot:content>
-        <strong>加粗的内容</strong>
+        <strong>这是内容</strong>
       </template>
       <template v-slot:title>
-        <strong>加粗的标题</strong>
+        <strong>这是标题</strong>
       </template>
     </Dialog>
   </div>

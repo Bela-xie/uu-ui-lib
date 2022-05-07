@@ -11,10 +11,10 @@ import Install from './markdowns/Install.md'
 import Intro from './markdowns/Intro.md'
 import GetStarted from './markdowns/GetStarted.md'
 
-const history = createWebHashHistory()
+const hashHistory = createWebHashHistory()
 const md = content => h(Markdown, { content, key: content })
 export const router = createRouter({
-    history: history,
+    history: hashHistory,
     routes: [
         { path: "/", component: Home },
         {

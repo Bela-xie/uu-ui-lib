@@ -1,24 +1,28 @@
 <template>
-  <div class="gulu-tabs">
-    <div class="gulu-tabs-nav" ref="containerEl">
+  <div class="uu-tabs">
+    <div class="uu-tabs-nav" ref="containerEl">
       <div
-        @click="select(t)"
-        :class="{ selected: t === selected }"
-        class="gulu-tabs-nav-item"
-        v-for="(t, index) in titles"
+        @click="
+          () => {
+            if (!tab.disabled) select(tab.title);
+          }
+        "
+        :class="{ selected: tab.title === selected, disabled: tab.disabled }"
+        class="uu-tabs-nav-item"
+        v-for="(tab, index) in tabProps"
         :key="index"
         :ref="
           (el) => {
-            if (t === selected) selectedItem = el;
+            if (tab.title === selected) selectedItem = el;
           }
         "
       >
-        {{ t }}
+        {{ tab.title }}
       </div>
-      <div ref="indicatorEl" class="gulu-tabs-nav-indicator"></div>
+      <div ref="indicatorEl" class="uu-tabs-nav-indicator"></div>
     </div>
-    <div class="gulu-tabs-content">
-      <component :key="selected" class="gulu-tabs-content-item" :is="current">
+    <div class="uu-tabs-content">
+      <component :key="selected" class="uu-tabs-content-item" :is="current">
       </component>
     </div>
   </div>
@@ -31,6 +35,10 @@ export default {
   props: {
     selected: {
       type: String,
+    },
+    disabled: {
+      type: Boolean,
+      default: true,
     },
   },
   setup(props, context) {
@@ -48,22 +56,23 @@ export default {
       });
     });
     const defaults = context.slots.default();
-    defaults.forEach((tag) => {
-      if (tag.type !== Tab) {
+    defaults.forEach((tab) => {
+      if (tab.type !== Tab) {
         throw new Error("Tabs 中必须是 Tab 组件");
       }
     });
-    const titles = defaults.map((tag) => {
-      return tag.props.title;
+    const tabProps = defaults.map((tab) => {
+      const { title, disabled } = tab.props;
+      return { title, disabled: disabled !== undefined };
     });
     const select = (t) => {
       context.emit("update:selected", t);
     };
     const current = computed(() => {
-      return defaults.filter((tag) => tag.props.title === props.selected)[0];
+      return defaults.filter((tab) => tab.props.title === props.selected)[0];
     });
     return {
-      titles,
+      tabProps,
       select,
       current,
       selectedItem,
@@ -78,7 +87,7 @@ export default {
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
-.gulu-tabs {
+.uu-tabs {
   &-nav {
     display: flex;
     color: $color;
@@ -93,6 +102,10 @@ $border-color: #d9d9d9;
       }
       &.selected {
         color: $blue;
+      }
+      &.disabled {
+        cursor: not-allowed;
+        color: #ccc;
       }
     }
     &-indicator {

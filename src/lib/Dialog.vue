@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <teleport to="body">
-      <div class="gulu-dialog-overlay" @click="overlayClose"></div>
-      <div class="gulu-dialog-wrapper">
-        <div class="gulu-dialog">
+      <div class="uu-dialog-overlay" @click="overlayClose"></div>
+      <div class="uu-dialog-wrapper">
+        <div class="uu-dialog">
           <header>
             <slot name="title" />
-            <span class="gulu-dialog-close" @click="close"></span>
+            <span class="uu-dialog-close" @click="close"></span>
           </header>
           <main>
             <slot name="content" />
@@ -59,11 +59,11 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
-.gulu-dialog {
+.uu-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
-  min-width: 15em;
+  min-width: 30em;
   max-width: 90%;
   &-overlay {
     position: fixed;
