@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import Button from "../lib/Button.vue";
+import { Button } from "uu-ui-vue3";
 export default {
   components: {
     Button,

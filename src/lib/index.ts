@@ -1,3 +1,5 @@
+// 等价于 import Button from "./Button.vue";export default Button
+import "./index.scss"
 export { default as Button } from './Button.vue'
 export { default as Dialog } from './Dialog.vue'
 export { default as Switch } from './Switch.vue'

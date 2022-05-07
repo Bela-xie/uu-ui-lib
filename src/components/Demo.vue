@@ -18,7 +18,8 @@
 import "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import { computed, ref } from "vue";
-import Button from "../lib/Button.vue";
+import { Button } from "uu-ui-vue3";
+import "uu-ui-vue3/dist/lib/uu.css";
 const Prism = (window as any).Prism;
 export default {
   components: {

@@ -17,8 +17,7 @@
 </template>
 
 <script lang="ts">
-import Dialog from "../lib/Dialog.vue";
-import Button from "../lib/Button.vue";
+import { Dialog, Button } from "uu-ui-vue3";
 import { ref } from "vue";
 export default {
   components: {

@@ -5,6 +5,7 @@
 
 ```
 import {Button, Tabs, Switch, Dialog} from "uu-ui-vue3"
+import "uu-ui-vue3/dist/lib/uu.css";
 ```
 
 就可以使用我提供的组件了。

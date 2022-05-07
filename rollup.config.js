@@ -1,3 +1,4 @@
+// 运行 rollup -c 命令，以执行该 rollup.config.js 文件
 import esbuild from 'rollup-plugin-esbuild'
 import vue from 'rollup-plugin-vue'
 import scss from 'rollup-plugin-scss'
@@ -5,7 +6,7 @@ import dartSass from 'sass';
 import { terser } from "rollup-plugin-terser"
 
 export default {
-    input: 'src/lib/index.ts',
+    input: './src/lib/index.ts',
     output: {
         globals: {
             vue: 'Vue'
