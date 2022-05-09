@@ -45,9 +45,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/vars.scss";
 $h: 32px;
-$border-color: #d9d9d9;
-$color: #333;
+$color: rgb(1, 1, 1);
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
@@ -63,7 +63,7 @@ $grey: grey;
   white-space: nowrap;
   background: white;
   color: $color;
-  border: 1px solid $border-color;
+  border: 1px solid $grayColor;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;

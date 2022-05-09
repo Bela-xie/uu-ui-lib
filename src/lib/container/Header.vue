@@ -7,8 +7,8 @@ export default {
   name: "UuHeader",
   props: {
     height: {
-      type: String,
-      default: "50",
+      type: [String, Number],
+      default: 50,
     },
   },
 };

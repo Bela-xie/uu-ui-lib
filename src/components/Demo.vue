@@ -52,25 +52,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-color: #d9d9d9;
+@import "../assets/vars.scss";
 .demo {
-  border: 1px solid $border-color;
+  border: 1px solid $grayColor;
   margin: 16px 0 32px;
   > h2 {
     font-size: 20px;
     padding: 8px 16px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $grayColor;
   }
   &-component {
     padding: 16px;
   }
   &-actions {
     padding: 8px 16px;
-    border-top: 1px dashed $border-color;
+    border-top: 1px dashed $grayColor;
   }
   &-code {
     padding: 8px 16px;
-    border-top: 1px dashed $border-color;
+    border-top: 1px dashed $grayColor;
     > pre {
       line-height: 1.1;
       font-family: Consolas, "Courier New", Courier, monospace;

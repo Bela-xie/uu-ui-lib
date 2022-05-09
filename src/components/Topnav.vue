@@ -67,9 +67,12 @@ $color: #007974;
       width: 32px;
       height: 32px;
     }
-    .logoImg {
-      width: 54px;
-      height: 40px;
+    a {
+      display: inline-block;
+      .logoImg {
+        width: 54px;
+        height: 40px;
+      }
     }
   }
   > .menu {

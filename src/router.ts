@@ -3,6 +3,7 @@ import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
 import ButtonDemo from './components/ButtonDemo/ButtonDemo.vue'
 import DialogDemo from './components/DialogDemo/DialogDemo.vue'
+import InputDemo from './components/InputDemo/InputDemo.vue'
 import TabsDemo from './components/TabsDemo/TabsDemo.vue'
 import SwitchDemo from './components/SwitchDemo/SwitchDemo.vue'
 import ContainerDemo from './components/ContainerDemo/ContainerDemo.vue'
@@ -31,6 +32,7 @@ export const router = createRouter({
                 { path: "dialog", component: DialogDemo },
                 { path: "tabs", component: TabsDemo },
                 { path: "container", component: ContainerDemo },
+                { path: "input", component: InputDemo },
             ]
         }
     ]

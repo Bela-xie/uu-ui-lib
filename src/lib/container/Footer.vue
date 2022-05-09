@@ -7,8 +7,8 @@ export default {
   name: "UuFooter",
   props: {
     height: {
-      type: String,
-      default: "50",
+      type: [String, Number],
+      default: 50,
     },
   },
 };

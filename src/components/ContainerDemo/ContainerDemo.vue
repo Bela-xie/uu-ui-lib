@@ -37,28 +37,28 @@
           <td>Header 组件</td>
           <td>height</td>
           <td>顶栏高度</td>
-          <td>string</td>
+          <td>string/number</td>
           <td>50</td>
         </tr>
         <tr>
           <td>Main 组件</td>
           <td>height</td>
           <td>主栏高度</td>
-          <td>string</td>
+          <td>string/number</td>
           <td>100</td>
         </tr>
         <tr>
           <td>Footer 组件</td>
           <td>height</td>
           <td>底栏高度</td>
-          <td>string</td>
+          <td>string/number</td>
           <td>50</td>
         </tr>
         <tr>
           <td>Aside 组件</td>
           <td>width</td>
           <td>侧栏宽度</td>
-          <td>string</td>
+          <td>string/number</td>
           <td>50</td>
         </tr>
       </tbody>
@@ -88,6 +88,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../assets/vars.scss";
 .container-demo {
   p:nth-child(2) {
     margin-top: 12px;
@@ -104,7 +105,7 @@ export default {
   table,
   th,
   td {
-    border: 1px solid #d9d9d9;
+    border: 1px solid $grayColor;
     border-collapse: collapse;
   }
 }

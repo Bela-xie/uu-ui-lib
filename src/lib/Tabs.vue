@@ -84,14 +84,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/vars.scss";
 $blue: #40a9ff;
 $color: #333;
-$border-color: #d9d9d9;
 .uu-tabs {
   &-nav {
     display: flex;
     color: $color;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $grayColor;
     position: relative;
     &-item {
       padding: 8px 0;

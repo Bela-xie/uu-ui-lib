@@ -7,8 +7,8 @@ export default {
   name: "UuAside",
   props: {
     width: {
-      type: String,
-      default: "50",
+      type: [String, Number],
+      default: 50,
     },
   },
 };
