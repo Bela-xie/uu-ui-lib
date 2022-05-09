@@ -68,8 +68,8 @@ $color: #007974;
       height: 32px;
     }
     .logoImg {
-      width: 34px;
-      height: 32px;
+      width: 54px;
+      height: 40px;
     }
   }
   > .menu {
