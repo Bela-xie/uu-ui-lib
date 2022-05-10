@@ -1,9 +1,15 @@
 <template>
   <div class="uu-input-wrapper">
+    <textarea
+      v-if="$attrs.type === 'textarea'"
+      class="uu-input uu-textarea"
+      v-bind="$attrs"
+    ></textarea>
     <input
+      v-else
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
-      class="uu-input"
+      :class="['uu-input', size ? `uu-input-${size}` : '']"
       v-bind="$attrs"
       :type="isPassword ? 'password' : 'text'"
       ref="inputRef"
@@ -38,6 +44,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    size: {
+      type: String,
+    },
   },
   emits: ["update:modelValue"],
   setup(props, context) {
@@ -59,7 +68,6 @@ export default {
 @import "../assets/vars.scss";
 .uu-input-wrapper {
   position: relative;
-
   .uu-input {
     width: 100%;
     height: 36px;
@@ -78,6 +86,20 @@ export default {
     &::placeholder {
       color: #c0baba;
     }
+    &.uu-input-large {
+      width: 50%;
+    }
+    &.uu-input-middle {
+      width: 50%;
+      height: 24px;
+    }
+    &.uu-input-small {
+      width: 50%;
+      height: 12px;
+    }
+  }
+  .uu-textarea {
+    height: auto;
   }
   //   输入框右侧图标统一样式
   .input-icon {

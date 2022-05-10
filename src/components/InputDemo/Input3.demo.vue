@@ -1,8 +1,12 @@
 <demo>
-支持 clearable 一键清空
+支持三种 size（small、middle、large）
 </demo>
 <template>
-  <uu-input v-model="input" clearable placeholder="Please input"></uu-input>
+  <uu-input placeholder="Please input" v-model="input" size="small"></uu-input
+  ><br />
+  <uu-input placeholder="Please input" v-model="input" size="middle"></uu-input
+  ><br />
+  <uu-input placeholder="Please input" v-model="input" size="large"></uu-input>
 </template>
 
 <script lang="ts">
