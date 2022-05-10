@@ -1,7 +1,10 @@
 <template>
   <button class="uu-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="uu-loadingIndicator"></span>
-    <slot></slot>
+    <span v-if="theme === 'link'" class="linkSlotWrap">
+      <slot></slot>
+    </span>
+    <slot v-else></slot>
   </button>
 </template>
 
@@ -87,6 +90,9 @@ $grey: grey;
     border-color: transparent;
     box-shadow: none;
     color: $blue;
+    > .linkSlotWrap {
+      border-bottom: 1px solid;
+    }
     &:hover,
     &:focus {
       color: lighten($blue, 10%);
