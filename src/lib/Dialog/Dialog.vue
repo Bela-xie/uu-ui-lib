@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import Button from "./Button.vue";
+import Button from "../Button.vue";
 export default {
   props: {
     visible: {
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/vars.scss";
+@import "../../assets/vars.scss";
 $radius: 4px;
 .uu-dialog {
   background: white;
