@@ -24,16 +24,19 @@
             <router-link to="/doc/dialog">dialog 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/switch">switch 组件</router-link>
-          </li>
-          <li>
             <router-link to="/doc/tabs">tabs 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/container">container 组件</router-link>
           </li>
           <li>
+            <router-link to="/doc/layout">layout 组件</router-link>
+          </li>
+          <li>
             <router-link to="/doc/input">input 组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/switch">switch 组件</router-link>
           </li>
         </ol>
       </aside>

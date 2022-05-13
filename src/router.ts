@@ -7,6 +7,7 @@ import InputDemo from './components/InputDemo/InputDemo.vue'
 import TabsDemo from './components/TabsDemo/TabsDemo.vue'
 import SwitchDemo from './components/SwitchDemo/SwitchDemo.vue'
 import ContainerDemo from './components/ContainerDemo/ContainerDemo.vue'
+import LayoutDemo from './components/LayoutDemo/LayoutDemo.vue'
 import { h } from "vue"
 import Markdown from './components/Markdown.vue'
 import Install from './markdowns/Install.md'
@@ -33,6 +34,7 @@ export const router = createRouter({
                 { path: "tabs", component: TabsDemo },
                 { path: "container", component: ContainerDemo },
                 { path: "input", component: InputDemo },
+                { path: "layout", component: LayoutDemo },
             ]
         }
     ]

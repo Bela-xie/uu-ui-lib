@@ -73,7 +73,7 @@ export default {
     height: 36px;
     border: 1px solid $grayColor;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: $inputBoxRadius;
     &:hover {
       outline: 1px solid #c5bbbb;
       &[disabled] {
