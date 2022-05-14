@@ -38,6 +38,9 @@
           <li>
             <router-link to="/doc/switch">switch 组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/message">message 组件</router-link>
+          </li>
         </ol>
       </aside>
       <main>
