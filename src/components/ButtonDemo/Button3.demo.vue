@@ -1,31 +1,40 @@
 <demo>
-支持 level
+支持 level：primary、success、info、warn、danger
 </demo>
 <template>
   <div>
     <div>
-      <Button level="main">主要按钮</Button>
-      <Button>普通按钮</Button>
-      <Button level="danger">危险按钮</Button>
-    </div>
+      <uu-button>default</uu-button>
+      <uu-button level="primary">primary</uu-button>
+      <uu-button level="success">success</uu-button>
+      <uu-button level="info">info</uu-button>
+      <uu-button level="warn">warn</uu-button>
+      <uu-button level="danger">danger</uu-button>
+    </div><br />
     <div>
-      <Button theme="link" level="main">主要链接按钮</Button>
-      <Button theme="link">普通链接按钮</Button>
-      <Button theme="link" level="danger">危险链接按钮</Button>
-    </div>
+      <uu-button theme="link">default</uu-button>
+      <uu-button theme="link" level="primary">primary</uu-button>
+      <uu-button theme="link" level="success">success</uu-button>
+      <uu-button theme="link" level="info">info</uu-button>
+      <uu-button theme="link" level="warn">warn</uu-button>
+      <uu-button theme="link" level="danger">danger</uu-button>
+    </div><br />
     <div>
-      <Button theme="text" level="main">主要文字按钮</Button>
-      <Button theme="text">普通文字按钮</Button>
-      <Button theme="text" level="danger">危险文字按钮</Button>
+      <uu-button theme="text">default</uu-button>
+      <uu-button theme="text" level="primary">primary</uu-button>
+      <uu-button theme="text" level="success">success</uu-button>
+      <uu-button theme="text" level="info">info</uu-button>
+      <uu-button theme="text" level="warn">warn</uu-button>
+      <uu-button theme="text" level="danger">danger</uu-button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Button } from "uu-ui-vue3";
+import UuButton from "../../lib/Button/Button.vue";
 export default {
   components: {
-    Button,
+    UuButton,
   },
 };
 </script>

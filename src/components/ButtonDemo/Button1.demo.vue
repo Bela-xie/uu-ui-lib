@@ -1,19 +1,19 @@
 <demo>
-常规使用
+常规使用：支持三种按钮形式
 </demo>
 <template>
   <div>
-    <Button>你好</Button>
-    <Button theme="link">你好</Button>
-    <Button theme="text">你好</Button>
+    <uu-button>你好</uu-button>
+    <uu-button theme="link">你好</uu-button>
+    <uu-button theme="text">你好</uu-button>
   </div>
 </template>
 
 <script lang="ts">
-import { Button } from "uu-ui-vue3";
+import UuButton from "../../lib/Button/Button.vue";
 export default {
   components: {
-    Button,
+    UuButton,
   },
 };
 </script>

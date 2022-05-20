@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import Button from "../Button.vue";
+import Button from "../Button/Button.vue";
 export default {
   props: {
     visible: {
@@ -59,12 +59,14 @@ export default {
 <style lang="scss">
 @import "../../assets/vars.scss";
 $radius: 4px;
+
 .uu-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
   min-width: 30em;
   max-width: 90%;
+
   &-overlay {
     position: fixed;
     top: 0;
@@ -74,6 +76,7 @@ $radius: 4px;
     background: fade_out(black, 0.5);
     z-index: 10;
   }
+
   &-wrapper {
     position: fixed;
     left: 50%;
@@ -81,7 +84,8 @@ $radius: 4px;
     transform: translate(-50%, -50%);
     z-index: 11;
   }
-  > header {
+
+  >header {
     padding: 12px 16px;
     border-bottom: 1px solid $grayColor;
     display: flex;
@@ -89,20 +93,24 @@ $radius: 4px;
     justify-content: space-between;
     font-size: 20px;
   }
-  > main {
+
+  >main {
     padding: 12px 16px;
   }
-  > footer {
+
+  >footer {
     border-top: 1px solid $grayColor;
     padding: 12px 16px;
     text-align: right;
   }
+
   &-close {
     position: relative;
     display: inline-block;
     width: 16px;
     height: 16px;
     cursor: pointer;
+
     &::before,
     &::after {
       content: "";
@@ -113,9 +121,11 @@ $radius: 4px;
       top: 50%;
       left: 50%;
     }
+
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
+
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }

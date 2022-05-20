@@ -1,31 +1,31 @@
 <demo>
-支持 size
+支持 size：normal（默认值）、large、small
 </demo>
 <template>
   <div>
     <div>
-      <Button size="big">大大大</Button>
-      <Button>普普通通</Button>
-      <Button size="small">小小小</Button>
+      <uu-button size="large">large</uu-button>
+      <uu-button>normal</uu-button>
+      <uu-button size="small">small</uu-button>
     </div>
     <div>
-      <Button theme="link" size="big">大大大</Button>
-      <Button theme="link">普普通通</Button>
-      <Button size="small" theme="link">小小小</Button>
+      <uu-button theme="link" size="large">large</uu-button>
+      <uu-button theme="link">normal</uu-button>
+      <uu-button size="small" theme="link">small</uu-button>
     </div>
     <div>
-      <Button size="big" theme="text">大大大</Button>
-      <Button theme="text">普普通通</Button>
-      <Button size="small" theme="text">小小小</Button>
+      <uu-button size="large" theme="text">large</uu-button>
+      <uu-button theme="text">normal</uu-button>
+      <uu-button size="small" theme="text">small</uu-button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Button } from "uu-ui-vue3";
+import UuButton from "../../lib/Button/Button.vue";
 export default {
   components: {
-    Button,
+    UuButton,
   },
 };
 </script>

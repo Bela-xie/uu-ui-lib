@@ -4,12 +4,7 @@
 <template>
   <div>
     <Button @click="toggle">点击蒙层不关闭对话框</Button>
-    <Dialog
-      v-model:visible="x"
-      :closeOnClickOverlay="false"
-      :ok="f1"
-      :cancel="f2"
-    >
+    <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
       <template v-slot:content> 内容 </template>
       <template v-slot:title> 标题 </template>
     </Dialog>
@@ -17,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import Button from "../../lib/Button.vue";
+import Button from "../../lib/Button/Button.vue";
 import Dialog from "../../lib/Dialog/Dialog.vue";
 import { ref } from "vue";
 export default {

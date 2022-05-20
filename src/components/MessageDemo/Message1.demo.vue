@@ -8,7 +8,7 @@
     
 <script lang="ts">
 import { h } from "@vue/runtime-core";
-import Button from "../../lib/Button.vue";
+import Button from "../../lib/Button/Button.vue";
 import { openMessage } from "../../lib/Message/openMessage";
 export default {
   components: { Button },

@@ -2,16 +2,16 @@
 支持 disabled
 </demo>
 <template>
-  <Button disabled>禁用按钮</Button>
-  <Button theme="link" disabled>禁用链接按钮</Button>
-  <Button theme="text" disabled>禁用按钮</Button>
+  <uu-button disabled>禁用按钮</uu-button>
+  <uu-button theme="link" disabled>禁用链接按钮</uu-button>
+  <uu-button theme="text" disabled>禁用文本按钮</uu-button>
 </template>
 
 <script lang="ts">
-import { Button } from "uu-ui-vue3";
+import UuButton from "../../lib/Button/Button.vue";
 export default {
   components: {
-    Button,
+    UuButton,
   },
 };
 </script>
