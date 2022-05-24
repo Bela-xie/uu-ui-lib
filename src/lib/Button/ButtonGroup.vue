@@ -6,12 +6,13 @@
 
 <script lang="ts">
 import { Component } from '@vue/runtime-core';
+import UuButton from './Button.vue'
 export default {
     name: 'UuButtonGroup',
     setup(props, context) {
         const defaultSlots = context.slots.default()
         defaultSlots.forEach((btn) => {
-            if ((btn.type as Component).name !== 'UuButton') {
+            if (btn.type !== UuButton) {
                 throw new Error("ButtonGroup 中必须是 Button 组件");
             }
         });

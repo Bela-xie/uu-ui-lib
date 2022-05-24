@@ -10,7 +10,8 @@
 </template>
 
 <script lang="ts">
-import { Tabs, Tab } from "uu-ui-vue3";
+import Tabs from '../../lib/Tabs.vue';
+import Tab from '../../lib/Tab.vue';
 import { ref } from "vue";
 export default {
   components: {
@@ -18,7 +19,7 @@ export default {
     Tab,
   },
   setup() {
-    const currentTab = ref("导航2");
+    const currentTab = ref("导航1");
     return {
       currentTab,
     };

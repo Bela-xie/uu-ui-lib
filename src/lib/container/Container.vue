@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { Component } from "@vue/runtime-core";
+import UuAside from './Aside.vue'
 export default {
   name: "UuContainer",
   setup(props, context) {
@@ -22,9 +23,7 @@ export default {
     );
     if (hasOtherSlot)
       console.warn(`UuContainer中的子元素必须是${slotsTypeArr}中的任意一个`);
-    const horizontal = slots.some(
-      (s) => (s.type as Component).name === "UuAside"
-    );
+    const horizontal = slots.some((s) => s.type === UuAside);
     return { horizontal };
   },
 };
@@ -34,6 +33,7 @@ export default {
 .uu-container {
   min-width: 200px;
   flex: 1;
+
   &.horizontal {
     display: flex;
   }

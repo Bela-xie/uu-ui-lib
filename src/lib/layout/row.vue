@@ -1,13 +1,11 @@
 <template>
-  <div
-    :class="`uu-row ${justify ? 'justify-' + justify : ''}`"
-    :style="gutterStyle"
-  >
+  <div :class="`uu-row ${justify ? 'justify-' + justify : ''}`" :style="gutterStyle">
     <slot />
   </div>
 </template>
 <script lang="ts">
 import { Component, computed, provide } from "@vue/runtime-core";
+import UuCol from './col.vue'
 interface Props {
   gutter: String | Number;
   justify?: String;
@@ -38,7 +36,7 @@ export default {
     provide("gutter", { value: props.gutter });
     const slots = context.slots.default();
     slots.forEach((s) => {
-      if ((s.type as Component).name !== "UuCol") {
+      if (s.type !== UuCol) {
         console.warn("UuRow中的子元素必须是 UuCol");
       }
     });
@@ -48,9 +46,9 @@ export default {
         paddingValue === 0
           ? {}
           : {
-              marginLeft: -paddingValue + "px",
-              marginRight: -paddingValue + "px",
-            };
+            marginLeft: -paddingValue + "px",
+            marginRight: -paddingValue + "px",
+          };
       return style;
     });
     return { gutterStyle };
@@ -61,10 +59,15 @@ export default {
 .uu-row {
   display: flex;
 }
+
 .justify-end {
   justify-content: flex-end;
 }
-@each $justify in center, space-around, space-evenly, space-between {
+
+@each $justify in center,
+space-around,
+space-evenly,
+space-between {
   .justify-#{$justify} {
     justify-content: $justify;
   }
