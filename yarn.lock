@@ -1066,10 +1066,10 @@ url-join@^4.0.1:
   resolved "https://registry.npmjs.org/url-join/-/url-join-4.0.1.tgz"
   integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
 
-uu-ui-vue3@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/uu-ui-vue3/-/uu-ui-vue3-2.0.3.tgz#e2790367d03dfa6b5481a821c5270b5f5b3d6358"
-  integrity sha512-I0030uZxapylGdmfYT+WgHAGz9tq/if9nfVGa/AP12Ltrl6pJdf5ajlRBx7Z+IDaIHpdK1p91CjPGvtpQriUsg==
+uu-ui-vue3@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/uu-ui-vue3/-/uu-ui-vue3-2.0.4.tgz#fab4ec76a4bc297d4d01a9d0510d09163a321933"
+  integrity sha512-tafjQdWBvOnHZwuyDjrF2umrWclPxDHd98GDsKnPr0wAE7LjpYYHEJI7b2b2gkLjpF5f7BzzRNJOoYxkJxuxBQ==
 
 vite-plugin-css@^1.0.4:
   version "1.0.4"

@@ -1,9 +1,9 @@
 {
   "name": "uu-ui-vue3",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "",
-  "main": "dist/lib/uu.esm.js",
-  "module": "dist/lib/uu.esm.js",
+  "main": "dist/lib/uu.js",
+  "module": "dist/lib/uu.js",
   "files": [
     "dist/lib/*"
   ],

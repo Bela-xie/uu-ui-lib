@@ -16,7 +16,7 @@ export default {
             vue: 'Vue'
         },
         name: 'UU',
-        file: 'dist/lib/uu.esm.js',
+        file: 'dist/lib/uu.js',
         format: 'es',
         plugins: [terser({})]
     }],

@@ -68,7 +68,7 @@ export default {
       defaults.forEach((tab: VNode) => {
         if (tab.type === Tab) {
           tabList.push(tab)
-        } else if (tab.type.toString() === 'Symbol(Fragment)') {
+        } else if (typeof tab.type === 'symbol') {
           (tab.children as VNodeArrayChildren).forEach((item) => {
             if ((item as VNode).type === Tab) {
               tabList.push(item)
