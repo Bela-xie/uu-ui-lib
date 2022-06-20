@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import UuInput from "../../lib/Input.vue";
+import { UuInput } from "uu-ui-vue3";
 export default {
   components: { UuInput },
 };

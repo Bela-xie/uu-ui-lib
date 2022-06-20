@@ -3,23 +3,22 @@
 </demo>
 <template>
   <uu-row :gutter="10">
-    <uu-col :xs="4" :sm="3" :md="2" :lg="5" :xl="1"
-      ><div class="colContent lightBlue"
-    /></uu-col>
-    <uu-col :xs="2" :sm="3" :md="4" :lg="1" :xl="5"
-      ><div class="colContent grayColor"
-    /></uu-col>
-    <uu-col :xs="2" :sm="3" :md="4" :lg="1" :xl="5"
-      ><div class="colContent lightBlue"
-    /></uu-col>
-    <uu-col :xs="4" :sm="3" :md="2" :lg="5" :xl="1"
-      ><div class="colContent grayColor"
-    /></uu-col>
+    <uu-col :xs="4" :sm="3" :md="2" :lg="5" :xl="1">
+      <div class="colContent lightBlue" />
+    </uu-col>
+    <uu-col :xs="2" :sm="3" :md="4" :lg="1" :xl="5">
+      <div class="colContent grayColor" />
+    </uu-col>
+    <uu-col :xs="2" :sm="3" :md="4" :lg="1" :xl="5">
+      <div class="colContent lightBlue" />
+    </uu-col>
+    <uu-col :xs="4" :sm="3" :md="2" :lg="5" :xl="1">
+      <div class="colContent grayColor" />
+    </uu-col>
   </uu-row>
 </template>
 <script lang="ts">
-import UuCol from "../../lib/layout/col.vue";
-import UuRow from "../../lib/layout/row.vue";
+import { UuCol, UuRow } from "uu-ui-vue3";
 export default {
   components: { UuCol, UuRow },
 };

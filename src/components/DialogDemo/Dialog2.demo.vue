@@ -3,21 +3,20 @@
 </demo>
 <template>
   <div>
-    <Button @click="showDialog">打开对话框</Button>
+    <uu-button @click="showDialog">打开对话框</uu-button>
   </div>
 </template>
 
 <script lang="ts">
-import Button from "../../lib/Button/Button.vue";
-import { openDialog } from "../../lib/Dialog/openDialog";
+import { UuButton, openUuDialog } from "uu-ui-vue3";
 import { h } from "vue";
 export default {
   components: {
-    Button,
+    UuButton,
   },
   setup() {
     const showDialog = () => {
-      openDialog({
+      openUuDialog({
         title: h("strong", {}, "标题"),
         content: "你好",
         ok() {

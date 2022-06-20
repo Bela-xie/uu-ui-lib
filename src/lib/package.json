@@ -1,0 +1,16 @@
+{
+  "name": "uu-ui-vue3",
+  "version": "2.0.3",
+  "description": "",
+  "main": "dist/lib/uu.esm.js",
+  "module": "dist/lib/uu.esm.js",
+  "files": [
+    "dist/lib/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && rollup -c"
+  },
+  "author": "bela",
+  "license": "ISC"
+}

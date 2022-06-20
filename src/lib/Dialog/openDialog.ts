@@ -1,6 +1,6 @@
-import Dialog from "./Dialog.vue"
+import UuDialog from "./Dialog.vue"
 import { createApp, h } from "vue"
-export const openDialog = (options) => {
+export const openUuDialog = (options) => {
     const { title, content, ok, cancel } = options
     const div = document.createElement("div")
     document.body.appendChild(div)
@@ -10,7 +10,7 @@ export const openDialog = (options) => {
     }
     const app = createApp({
         render() {
-            return h(Dialog, {
+            return h(UuDialog, {
                 visible: true,
                 // 监听 "update:visible" 事件，即在 Dialog 中 context.emit("update:visible")触发
                 "onUpdate:visible": newVisible => {
@@ -21,8 +21,8 @@ export const openDialog = (options) => {
                 ok,
                 cancel
             }, {
-                title,
-                content
+                title: () => title,
+                content: () => content
             })
         }
     })

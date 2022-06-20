@@ -58,9 +58,9 @@ export default {
       return paddingValue === 0
         ? {}
         : {
-            paddingLeft: paddingValue + "px",
-            paddingRight: paddingValue + "px",
-          };
+          paddingLeft: paddingValue + "px",
+          paddingRight: paddingValue + "px",
+        };
     },
     colClass() {
       const spanString = "uu-col-" + this.span;
@@ -105,14 +105,15 @@ export default {
 };
 </script>
 <style lang="scss">
-@use "sass:math";
 @mixin colSize($classPre) {
   @for $i from 1 through 12 {
     $ratio: math.div($i, 12) * 100 * 1%;
+
     .#{$classPre}-#{$i} {
       flex: 0 0 $ratio;
       max-width: $ratio;
     }
+
     .#{$classPre}-offset-#{$i} {
       margin-left: $ratio;
     }

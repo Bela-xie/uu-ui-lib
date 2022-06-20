@@ -2,15 +2,15 @@
 支持添加文字描述
 </demo>
 <template>
-  <Switch v-model:value="bool" activeText="是" inActiveText="否" />
+  <uu-switch v-model:value="bool" activeText="是" inActiveText="否" />
 </template>
 
 <script lang="ts">
 import { ref } from "vue";
-import Switch from "../../lib/Switch.vue";
+import { UuSwitch } from "uu-ui-vue3";
 export default {
   components: {
-    Switch,
+    UuSwitch,
   },
   setup() {
     const bool = ref(false);

@@ -1,5 +1,5 @@
 <template>
-  <button class="uu-switch"
+  <button ref="switchEl" id="uu-switch" class="uu-switch"
     :class="{ 'uu-switch-checked': value, 'uu-switch-inActiveColor': inActiveColor, 'uu-switch-activeColor': activeColor, [size]: size }"
     @click="toggle">
     <transition name="fade">
@@ -12,10 +12,14 @@
   </button>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { onMounted, ref, watch } from '@vue/runtime-core';
+export default defineComponent({
   props: {
-    value: Boolean,
+    value: {
+      type: Boolean
+    },
     inActiveColor: {
       type: String,
       default: ''
@@ -31,23 +35,38 @@ export default {
       type: String
     },
     size: {
-      validator(value) {
-        return ['large', 'small'].includes(value)
+      type: String,
+      default: "",
+      validator: (v: string) => {
+        return ['large', 'small', ''].includes(v)
       }
     }
   },
-  emits: ['update:value'],
+  emits: ["update:value"],
   setup(props, context) {
+    const switchEl = ref<HTMLButtonElement>()
     const toggle = () => {
       context.emit("update:value", !props.value);
     };
-    return { toggle };
+    onMounted(() => {
+      if (props.inActiveColor && switchEl.value) {
+        switchEl.value.style.background = props.inActiveColor
+      }
+    })
+    watch(() => props.value, () => {
+      if (props.value && props.activeColor && switchEl.value) {
+        switchEl.value.style.background = props.activeColor
+      } else if (!props.value && props.inActiveColor && switchEl.value) {
+        switchEl.value.style.background = props.inActiveColor
+      }
+    })
+    return { toggle, switchEl };
   },
-};
+})
 </script>
 
 <style lang="scss">
-@use "sass:math";
+// @use "sass:math";
 @import "../assets/vars.scss";
 
 .uu-switch {
@@ -58,7 +77,7 @@ export default {
   color: white;
 
   &-inActiveColor {
-    background: v-bind(inActiveColor);
+    // background: v-bind(inActiveColor);
   }
 
   &-ball {
@@ -83,7 +102,7 @@ export default {
     background: $lightBlueColor;
 
     &.uu-switch-activeColor {
-      background: v-bind(activeColor);
+      // background: v-bind(activeColor);
     }
   }
 

@@ -2,17 +2,16 @@
 支持 center：让文字居中
 </demo>
 <template>
-  <Button @click="openText">show text</Button>
+  <uu-button @click="openText">show text</uu-button>
 </template>
     
 <script lang="ts">
-import Button from "../../lib/Button/Button.vue";
-import { openMessage } from "../../lib/Message/openMessage";
+import { UuButton, openUuMessage } from "uu-ui-vue3";
 export default {
-  components: { Button },
+  components: { UuButton },
   methods: {
     openText() {
-      openMessage({
+      openUuMessage({
         message: "This is a message.",
         center: true,
       });

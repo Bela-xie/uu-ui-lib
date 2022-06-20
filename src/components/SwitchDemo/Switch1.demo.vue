@@ -2,15 +2,15 @@
 常规用法
 </demo>
 <template>
-  <Switch v-model:value="bool" />
+  <uu-switch v-model:value="bool" />
 </template>
 
 <script lang="ts">
 import { ref } from "vue";
-import { Switch } from "uu-ui-vue3";
+import { UuSwitch } from "uu-ui-vue3";
 export default {
   components: {
-    Switch,
+    UuSwitch,
   },
   setup() {
     const bool = ref(false);

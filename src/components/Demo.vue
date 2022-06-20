@@ -5,8 +5,8 @@
       <Component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
-      <Button @click="showCode" v-else>显示代码</Button>
+      <uu-button @click="hideCode" v-if="codeVisible">隐藏代码</uu-button>
+      <uu-button @click="showCode" v-else>显示代码</uu-button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -18,12 +18,12 @@
 import "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import { computed, ref } from "vue";
-import { Button } from "uu-ui-vue3";
-import "uu-ui-vue3/dist/lib/uu.css";
+import { UuButton } from "uu-ui-vue3";
+import "uu-ui-vue3/dist/lib/uu.esm.css";
 const Prism = (window as any).Prism;
 export default {
   components: {
-    Button,
+    UuButton,
   },
   props: {
     component: {
@@ -53,25 +53,31 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/vars.scss";
+
 .demo {
   border: 1px solid $grayColor;
   margin: 16px 0 32px;
-  > h2 {
+
+  >h2 {
     font-size: 20px;
     padding: 8px 16px;
     border-bottom: 1px solid $grayColor;
   }
+
   &-component {
     padding: 16px;
   }
+
   &-actions {
     padding: 8px 16px;
     border-top: 1px dashed $grayColor;
   }
+
   &-code {
     padding: 8px 16px;
     border-top: 1px dashed $grayColor;
-    > pre {
+
+    >pre {
       line-height: 1.1;
       font-family: Consolas, "Courier New", Courier, monospace;
       margin: 0;

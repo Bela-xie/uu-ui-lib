@@ -17,7 +17,7 @@ import "uu-ui-vue3/dist/lib/uu.css";
 ```
 <template>
   <div>
-    <Button>按钮</Button>
+    <uu-button>按钮</uu-button>
   </div>
 </template>
 <script>

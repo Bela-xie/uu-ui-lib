@@ -2,21 +2,20 @@
 常规使用
 </demo>
 <template>
-  <Tabs v-model:selected="currentTab">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
-    <Tab title="导航3">内容3</Tab>
-  </Tabs>
+  <uu-tabs v-model:selected="currentTab">
+    <uu-tab title="导航1">内容1</uu-tab>
+    <uu-tab title="导航2">内容2</uu-tab>
+    <uu-tab title="导航3">内容3</uu-tab>
+  </uu-tabs>
 </template>
 
 <script lang="ts">
-import Tabs from '../../lib/Tabs.vue';
-import Tab from '../../lib/Tab.vue';
+import { UuTabs, UuTab } from "uu-ui-vue3";
 import { ref } from "vue";
 export default {
   components: {
-    Tabs,
-    Tab,
+    UuTabs,
+    UuTab,
   },
   setup() {
     const currentTab = ref("导航1");

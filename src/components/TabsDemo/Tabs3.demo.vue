@@ -2,19 +2,19 @@
 动态增加标签页
 </demo>
 <template>
-  <Tabs v-model:selected="currentTab" :editable="true" @edit="editHandle">
-    <Tab v-for="item in tabList" :idName="item.idName" :key="item.idName" :title="item.title">{{ item.content }}</Tab>
-  </Tabs>
+  <uu-tabs v-model:selected="currentTab" :editable="true" @edit="editHandle">
+    <uu-tab v-for="item in tabList" :idName="item.idName" :key="item.idName" :title="item.title">{{ item.content }}
+    </uu-tab>
+  </uu-tabs>
 </template>
 
 <script lang="ts">
-import Tabs from '../../lib/Tabs.vue';
-import Tab from '../../lib/Tab.vue';
+import { UuTabs, UuTab } from "uu-ui-vue3";
 import { reactive, ref } from "vue";
 export default {
   components: {
-    Tabs,
-    Tab,
+    UuTabs,
+    UuTab,
   },
   setup() {
     const tabList = reactive([

@@ -2,8 +2,8 @@
   <div>
     <h1>Dialog 组件示例</h1>
     <Demo :component="Dialog1Demo" />
-    <Demo :component="Dialog3Demo" />
     <Demo :component="Dialog2Demo" />
+    <Demo :component="Dialog3Demo" />
   </div>
 </template>
 

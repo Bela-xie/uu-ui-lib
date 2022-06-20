@@ -41,14 +41,14 @@ export default {
   },
   emits: ['update:selected', 'edit'],
   setup(props, context) {
-    const selectedItem = ref<HTMLDivElement>(null);
-    const indicatorEl = ref<HTMLDivElement>(null);
-    const containerEl = ref<HTMLDivElement>(null);
-    let current = ref(null)
-    let tabProps = ref(null)
+    const selectedItem = ref<HTMLDivElement>();
+    const indicatorEl = ref<HTMLDivElement>();
+    const containerEl = ref<HTMLDivElement>();
+    let current = ref<any>(null)
+    let tabProps = ref<any>(null)
 
     const setIndicatorStyle = () => {
-      if (selectedItem.value && containerEl.value) {
+      if (selectedItem.value && containerEl.value && indicatorEl.value) {
         const { width, left: left1 } =
           selectedItem.value.getBoundingClientRect();
         indicatorEl.value.style.width = width + "px";
@@ -56,14 +56,16 @@ export default {
         const left = left1 - left2;
         indicatorEl.value.style.left = left + "px";
       } else {
-        indicatorEl.value.style.width = "0px";
+        if (indicatorEl.value) {
+          indicatorEl.value.style.width = "0px";
+        }
       }
     }
 
     const handleByDefaultSlots = () => {
-      let tabList = []
+      let tabList: Array<any> = []
       const defaults = context.slots.default();
-      defaults.forEach((tab) => {
+      defaults.forEach((tab: VNode) => {
         if (tab.type === Tab) {
           tabList.push(tab)
         } else if (tab.type.toString() === 'Symbol(Fragment)') {

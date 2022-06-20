@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import UuButton from "../../lib/Button/Button.vue";
+import { UuButton } from 'uu-ui-vue3'
 export default {
   components: {
     UuButton,

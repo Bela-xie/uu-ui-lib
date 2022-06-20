@@ -3,40 +3,75 @@
 </demo>
 <template>
   <uu-row>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
-    <uu-col :span="3"><div class="colContent grayColor"></div></uu-col>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent grayColor"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
   </uu-row>
   <uu-row justify="center">
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
-    <uu-col :span="3"><div class="colContent grayColor"></div></uu-col>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent grayColor"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
   </uu-row>
   <uu-row justify="end">
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
-    <uu-col :span="3"><div class="colContent grayColor"></div></uu-col>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent grayColor"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
   </uu-row>
   <uu-row justify="space-between">
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
-    <uu-col :span="3"><div class="colContent grayColor"></div></uu-col>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent grayColor"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
   </uu-row>
   <uu-row justify="space-around">
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
-    <uu-col :span="3"><div class="colContent grayColor"></div></uu-col>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent grayColor"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
   </uu-row>
   <uu-row justify="space-evenly">
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
-    <uu-col :span="3"><div class="colContent grayColor"></div></uu-col>
-    <uu-col :span="3"><div class="colContent lightBlue"></div></uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent grayColor"></div>
+    </uu-col>
+    <uu-col :span="3">
+      <div class="colContent lightBlue"></div>
+    </uu-col>
   </uu-row>
 </template>
 
 <script lang="ts">
-import UuCol from "../../lib/layout/col.vue";
-import UuRow from "../../lib/layout/row.vue";
+import { UuCol, UuRow } from "uu-ui-vue3";
 export default {
   components: { UuCol, UuRow },
 };

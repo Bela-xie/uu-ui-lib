@@ -2,17 +2,17 @@
 支持 size，传值只接受 large 和 small
 </demo>
 <template>
-  <Switch v-model:value="bool" size="large" /><br/>
-  <Switch v-model:value="bool" /><br/>
-  <Switch v-model:value="bool" size="small" />
+  <uu-switch v-model:value="bool" size="large" /><br />
+  <uu-switch v-model:value="bool" /><br />
+  <uu-switch v-model:value="bool" size="small" />
 </template>
 
 <script lang="ts">
 import { ref } from "vue";
-import Switch from "../../lib/Switch.vue";
+import { UuSwitch } from "uu-ui-vue3";
 export default {
   components: {
-    Switch,
+    UuSwitch,
   },
   setup() {
     const bool = ref(false);

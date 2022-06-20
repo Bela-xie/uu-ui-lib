@@ -2,35 +2,34 @@
 支持四种类型：info（默认）、success、warn、error
 </demo>
 <template>
-  <Button @click="openText">show text</Button>
-  <Button @click="openSuccessText">show success text</Button>
-  <Button @click="openWarnText">show warn text</Button>
-  <Button @click="openErrorText">show error text</Button>
+  <uu-button @click="openText">show text</uu-button>
+  <uu-button @click="openSuccessText">show success text</uu-button>
+  <uu-button @click="openWarnText">show warn text</uu-button>
+  <uu-button @click="openErrorText">show error text</uu-button>
 </template>
     
 <script lang="ts">
-import Button from "../../lib/Button/Button.vue";
-import { openMessage } from "../../lib/Message/openMessage";
+import { UuButton, openUuMessage } from "uu-ui-vue3";
 export default {
-  components: { Button },
+  components: { UuButton },
   methods: {
     openText() {
-      openMessage("This is a message.");
+      openUuMessage("This is a message.");
     },
     openSuccessText() {
-      openMessage({
+      openUuMessage({
         message: "This is a message.",
         type: "success",
       });
     },
     openWarnText() {
-      openMessage({
+      openUuMessage({
         message: "This is a message.",
         type: "warn",
       });
     },
     openErrorText() {
-      openMessage({
+      openUuMessage({
         message: "This is a message.",
         type: "error",
       });

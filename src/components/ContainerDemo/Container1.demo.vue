@@ -10,11 +10,7 @@
 </template>
 
 <script lang="ts">
-import UuContainer from "../../lib/container/Container.vue";
-import UuAside from "../../lib/container/Aside.vue";
-import UuMain from "../../lib/container/Main.vue";
-import UuHeader from "../../lib/container/header.vue";
-import UuFooter from "../../lib/container/footer.vue";
+import { UuContainer, UuAside, UuMain, UuHeader, UuFooter } from "uu-ui-vue3";
 export default {
   components: {
     UuContainer,

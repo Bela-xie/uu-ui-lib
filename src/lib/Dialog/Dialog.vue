@@ -12,8 +12,8 @@
             <slot name="content" />
           </main>
           <footer>
-            <Button @click="okClick">OK</Button>
-            <Button @click="cancelClick">Cancel</Button>
+            <uu-button @click="okClick">OK</uu-button>
+            <uu-button @click="cancelClick">Cancel</uu-button>
           </footer>
         </div>
       </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import Button from "../Button/Button.vue";
+import UuButton from "../Button/Button.vue";
 export default {
   props: {
     visible: {
@@ -36,7 +36,7 @@ export default {
     ok: Function,
     cancel: Function,
   },
-  components: { Button },
+  components: { UuButton },
   setup(props, context) {
     const close = () => {
       context.emit("update:visible", !props.visible);

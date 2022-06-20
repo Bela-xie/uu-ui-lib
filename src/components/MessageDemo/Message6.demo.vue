@@ -2,17 +2,16 @@
 支持使用 HTML 片段作为正文内容，需要设置 dangerouslyUseHTMLString 为 true
 </demo>
 <template>
-  <Button @click="openText">show html content</Button>
+  <uu-button @click="openText">show html content</uu-button>
 </template>
     
 <script lang="ts">
-import Button from "../../lib/Button/Button.vue";
-import { openMessage } from "../../lib/Message/openMessage";
+import { UuButton, openUuMessage } from "uu-ui-vue3";
 export default {
-  components: { Button },
+  components: { UuButton },
   methods: {
     openText() {
-      openMessage({
+      openUuMessage({
         message: "<p>This is a <i>message</i>.</p>",
         dangerouslyUseHTMLString: true,
       });

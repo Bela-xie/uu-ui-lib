@@ -1,5 +1,5 @@
 import UuMessage from './Message.vue'
-import { createApp, VNode } from 'vue'
+import { createApp, h, VNode } from 'vue/dist/vue.esm-bundler.js'
 type Options = {
     message: string | VNode;
     type?: 'info' | 'success' | 'warn' | 'error'
@@ -8,9 +8,10 @@ type Options = {
     center?: boolean
     dangerouslyUseHTMLString?: boolean
 }
-export const openMessage = (options: Options | string) => {
+export const openUuMessage = (options: Options | string) => {
     let mainText = ''
-    let MainNode: VNode = null
+    // 使用返回 null 的函数将渲染一个注释
+    let MainNode: VNode = h(() => null)
     const showType = (options as Options).type || 'info'
     const showClose = (options as Options).showClose || false
     const center = (options as Options).center || false
